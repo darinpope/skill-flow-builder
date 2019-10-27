@@ -14,6 +14,10 @@
 
 ## Deploy your Alexa Skill
 
-### Step 1: Set up your ASK profile 
+### Step 1: Setup your AWS IAM User Account
+
+
+
+### Step 2: Set up your ASK profile 
 
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/Documents:/root --workdir="/root" -v ${HOME}/.ask:/root/.ask -it darinpope/skill-flow-builder:latest ask init --no-browser`
