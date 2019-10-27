@@ -7,3 +7,6 @@
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -it darinpope/skill-flow-builder:latest npm --version`
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -it darinpope/skill-flow-builder:latest npx --version`
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -it darinpope/skill-flow-builder:latest npx alexa-sfb --version`
+
+## Create a skill project
+* `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/Documents:/root --workdir="/root" -it darinpope/skill-flow-builder:latest npx alexa-sfb new hello-world`
