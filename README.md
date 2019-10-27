@@ -9,8 +9,15 @@
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/.ask:/root/.ask:ro -it darinpope/skill-flow-builder:latest npx alexa-sfb --version`
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/.ask:/root/.ask:ro -it darinpope/skill-flow-builder:latest ask --version`
 
-## Create a skill project
+## Setup a project
+
+### Create a skill project
+
 * `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/.ask:/root/.ask:ro -v ${HOME}/Documents:/root --workdir="/root" -it darinpope/skill-flow-builder:latest npx alexa-sfb new hello-world`
+
+### Install a language extension for Visual Studio Code
+
+* `docker run --rm -v ${HOME}/.aws:/root/.aws:ro -v ${HOME}/.ask:/root/.ask:ro -v ${HOME}/Documents:/root --workdir="/root/hello-world" -it darinpope/skill-flow-builder:latest npx alexa-sfb new hello-world`
 
 ## Deploy your Alexa Skill
 
