@@ -1,14 +1,13 @@
-FROM python:2.7.16-alpine
+FROM python:2.7.16-stretch
 
 ENV PATH="/root/.local/bin:${PATH}"
-ENV GIT_VERSION=2.22.2-r0
-ENV NODEJS_VERSION=10.16.3-r0
 ENV AWSCLI_VERSION=1.16.300
 ENV SFB_VERSION=1.3.1
 ENV ASKCLI_VERSION=1.7.17
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache git=${GIT_VERSION} nodejs=${NODEJS_VERSION} npm=${NODEJS_VERSION} && \
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
+    apt-get update && apt-get -y upgrade && \
+    apt-get -y install nodejs && \
     pip install awscli==${AWSCLI_VERSION} --upgrade --user && \
     npm install -g @alexa-games/sfb-cli@${SFB_VERSION} && \
     npm install -g ask-cli@${ASKCLI_VERSION}
